@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	border: none;
+	text-decoration: none;
+	font-family: "Overpass", sans-serif;
+	list-style: none;
+	color: white;
+	box-sizing: border-box;
+}
+html{
+	height: 100%;
+	
+}
+body{
+	min-height: 100%;
+	background-color:#1C3879;
+}
+header {
+	position: relative;
+	width: 100%;
+	height: 4rem;
+	display: flex;
+	background-color: rgba(96, 125, 169, .5);
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 4rem;
+	z-index: 100;
+}
+#logo {
+	font-size: 2rem;
+	text-transform: uppercase;
+	font-weight: bold;
+	position: relative;
+	top: 2px;
+}
+.nav-ul {
+	display: flex;
+}
+.nav-link {
+	border-left: 1px solid #EAE3D2;
+}
+.nav-link:first-child {
+	border-left: none;
+}
+.nav-link a:hover{
+	color: #EAE3D2;
+}
+.nav-link a{
+	font-size: 1rem;
+	text-transform: uppercase;
+	padding: .3rem 2rem;
+}
+
+#proyectos-div {
+	display: none;
+}
+
+#bars {
+	display: none;
+}
+#background-img-container {
+	max-width: 100%;
+	overflow: hidden;
+}
+#background-img {
+	width: 100%;
+	height: 80%;
+	object-fit: cover;
+	position: absolute;
+	top: 0;
+	z-index: 0;
+	filter: brightness(.7);
+}
+#title {
+	color: white;
+	display:inline;
+	font-size: 6rem;
+	position: absolute;
+	max-width: 40rem;
+	z-index: 10;
+	left: 4rem;
+	top: 8rem;
+	line-height: 6rem;
+}
+#main-para {
+	position: absolute;
+	color: white;
+	font-size: 1.5rem;
+	top: 22rem;
+	left: 4rem;
+	max-width: 80vw;
+}
+main {
+	background: linear-gradient(to top, #1C3879, #607EAA, #95aed4);
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+/* Slider */
+#sliders-container {
+	border-radius: 1rem;
+    height: 30rem;
+    width: 90%;
+    position:relative;
+	top: 25rem;
+	margin: 0 auto;
+    display:flex;
+    align-items: center;
+    overflow: hidden;
+}
+.img-slider{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: all, 1s;
+    transition-timing-function: ease-in-out;
+    pointer-events: none;
+	z-index: 30;
+}
+.principal{
+    z-index: 50;
+    left:0%;
+}
+.siguiente {
+    left:100%;
+    z-index: 2;
+}
+.ocultas {
+    display: block;
+    position:absolute;
+    left: -100%;
+    z-index:5;
+}
+.controler {
+    position:absolute;
+    display: flex;
+    align-items: center;
+    z-index: 55;
+    color:white;
+    background-color: rgba(40,40,40,0.8);
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding: .5rem;
+    cursor:pointer;
+    border-radius: 50%;
+    height: 2rem;
+    width: 2rem;
+    text-align: center;
+}
+
+#atras {
+    left:.5rem;
+}
+#adelante {
+    right:.5rem;
+}
+
+/* Fin slider */
+.noscroll{
+	overflow: hidden;
+}
+#boxes-container {
+	position: relative;
+	top: 30rem;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	width: 95vw;
+	margin: 0 auto;
+}
+.information-box {
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	background-color: #F9F5EB;
+	border: 10px solid #607EAA;
+	border-radius: 1rem;
+	height: 17rem;
+	width: 25rem;
+	padding: 2rem 1rem;
+	margin-bottom: 2rem;
+}
+.information-box p{
+	color: black;
+	text-align: center;
+}
+.information-box h2{
+	color: black;
+	text-align: center;
+}
+@media (max-width: 900px) {
+	nav{
+		display: block;
+		overflow: hidden;
+		position: absolute;
+		background-color: #F9F5EB;
+		top: 4rem;
+		right: 0;
+		width: 0;
+		height: 100vh;
+		transition: all .5s;
+		z-index: 500;
+	}
+	.active-nav {
+		width: 17rem;
+	}
+	.nav-ul {
+		flex-direction: column;
+	}
+	.nav-link {
+		text-align: right;
+		height: 4rem;
+	}
+	.nav-link a{
+		line-height: 4rem;
+		color: black;
+		white-space: nowrap;
+		overflow: hidden;
+		font-size: 1.5rem;
+		padding-right: .5rem;
+	}
+	#bars{
+		display: inline;
+		height: 2rem;
+		color: white;
+	}
+	#background-img-container{
+		height: 30rem;
+		overflow: hidden;
+	}
+	#background-img {
+		
+		object-fit: cover;
+	}
+	header{
+		padding: 0 1rem;
+	}
+	#title {
+		font-size: 4rem;
+		line-height: 4rem;
+		left: 1rem;
+		max-width: 90vw;
+	}
+	#main-para {
+		font-size: 1.5rem;
+		left: 1rem;
+		top: 18rem;
+		max-width: 80vw;
+	}
+}
